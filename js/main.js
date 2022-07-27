@@ -1,5 +1,7 @@
-const randomNumber = Math.ceil(Math.random() * 100)
-console.log(randomNumber)
+function rollRandomNumber(){
+    let randomNumber = Math.ceil(Math.random() * 100)
+    return randomNumber
+}
 const playerChoice = document.getElementById("playerChoice")
 let box = document.querySelector('.hidden-number-container')
 let number = document.querySelector('.hiddenNumber')
@@ -10,9 +12,10 @@ let usedNumbers = document.querySelector('.used-numbers')
 let errorInfo = document.querySelector('.errorInfo')
 let resultsArray = document.querySelector('.array')
 const restart = document.querySelector('.reset')
+const inputContainer = document.querySelector('.inputContainer')
 
 // making random number displays in the box!
-let rand = document.querySelector('.hiddenNumber').innerText = randomNumber
+let rand = document.querySelector('.hiddenNumber').innerText = rollRandomNumber()
 
 document.querySelector('.button').addEventListener('click', checkForValid)
 
@@ -26,18 +29,24 @@ function checkForValid(){
     }
     // Jeśli liczba jest większa od szukanej
     else if(playerChoice.value > rand){
+        console.log(rand)
         moreOrLessInfo()
         timeChangeAndCounterText()
         clearInputAndCounterPlus()
+        
     }
     // Jeśli liczba jest mniejsza od szukanej
     else if(playerChoice.value < rand){
+        console.log(rand)
         moreOrLessInfo()
         timeChangeAndCounterText()
         clearInputAndCounterPlus()
     } else {
         moreOrLessInfo()
         clearInputAndCounterPlus()
+        makeResetButton()
+        console.log(rand)
+        
     }
 }
 
@@ -84,18 +93,13 @@ function moreOrLessInfo(){
         errorInfo.classList.toggle('hidden')
         errorInfo.style.color = 'rgb(211, 207, 207)'
         errorInfo.innerText = `Congratulations! You guess right! It's ${rand}`
-        makeResetButton()
+        restart.classList.toggle('hidden')
+        rollRandomNumber()
     }
 }
 
 function makeResetButton(){
-    const del = document.querySelector('.inputContainer')
-    const buton = document.createElement("button");
-    buton.classList.add('reset')
-    buton.setAttribute('onclick', 'resetGame()')
-    const butonValue = document.createTextNode(`Reset`);
-    buton.appendChild(butonValue);
-    document.querySelector('.inputContainer').appendChild(buton);
+    
 }
 
 function resetGame(){
@@ -111,5 +115,6 @@ function resetGame(){
     // show again input and verify button
     document.querySelector('.inputContainer')
     // toss new random number
+    rand = rollRandomNumber()
     
 }

@@ -9,6 +9,10 @@
   font-size: 65.5%;
 }
 
+body{
+  position: relative;
+}
+
 .hidden{
   display: none;
 }
@@ -26,6 +30,7 @@ h1{
   font-size: 7rem;
   text-align: center;
   margin-top: 0;
+  margin-bottom: 2rem;
   color: white;
   text-shadow: 2px 2px #0059ff;
   
@@ -107,28 +112,27 @@ button:active {
 }
 
 .previousResults{
-  height: 18vmin;
-  margin-bottom: 3%;
+  height: 27vmin;
+  margin-bottom: 2%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: start;
-  gap: 1.5rem;
+  column-gap: 1.5rem;
   display: flex;
-  align-items: center;
-  border: 1px solid black;
   justify-content: center;
 }
 .previousResults div{
   font-size: 5rem;
-  border: 2px solid black;
-  height: 100x;
-  width: 100px;
+  box-shadow: 4px 6px #034c7c;
+  height: 900x;
+  width: 90px;
   border-radius: 50%;
   align-self: center;
   text-align: center;
   color: white;
-  text-shadow: 2px 2px #0059ff;
+  text-shadow: 2px 2px 5px #e0bf03;
+  background-color: #0198fc;
   padding: 1%;
   
 }
@@ -163,3 +167,16 @@ button:active {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+
+.confetti{
+  position: relative;
+  border: 1px solid black;
+  height: 10rem;
+  width: 20rem;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
