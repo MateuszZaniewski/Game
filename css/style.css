@@ -1,0 +1,165 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 65.5%;
+}
+
+.hidden{
+  display: none;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+.flex-container{
+  background-image: linear-gradient(to right top, #3d6093, #00698f, #006c6f, #006a3f, #456205);
+  height: 100vmin;
+}
+
+
+h1{
+  font-size: 7rem;
+  text-align: center;
+  margin-top: 0;
+  color: white;
+  text-shadow: 2px 2px #0059ff;
+  
+}
+
+h2{
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px #0059ff;
+}
+
+/* .hidden-number-container{
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  margin: 0 45% 0 45%;
+  height: 10rem;
+  align-items: center;
+  font-size: 4rem;
+  text-align: center;
+} */
+
+/* 
+.hiddenNumber{
+  font-size: 4rem;
+  text-align: center;
+  color: black;
+} */
+
+input{
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 1rem;
+  width: 25rem;
+  box-shadow: 2px 2px #0059ff;
+  background-color: #4CAF50;
+}
+
+input::placeholder{
+  color: white;
+}
+
+input, select, textarea{
+  color: white;
+}
+
+.inputContainer{
+ display: flex;
+ justify-content: center;
+ font-size: 3rem;
+ margin-top: 5%;
+ margin-bottom: 2%;
+ height: 4rem;
+ gap: 10px;
+}
+
+button{
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.previousResults{
+  height: 18vmin;
+  margin-bottom: 3%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: start;
+  gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  justify-content: center;
+}
+.previousResults div{
+  font-size: 5rem;
+  border: 2px solid black;
+  height: 100x;
+  width: 100px;
+  border-radius: 50%;
+  align-self: center;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px #0059ff;
+  padding: 1%;
+  
+}
+
+.used-numbers{
+  font-size: 2.5rem;
+  margin: auto;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px #0059ff;
+}
+
+.errorInfo{
+  font-size: 3rem;
+  text-align: center;
+  text-size-adjust: auto;
+  padding: 1% 1% 1% 1%;
+  color: white;
+  text-shadow: 2px 2px #0059ff;
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 9rem;
+}
+
+.array{
+  font-size: 3rem;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
