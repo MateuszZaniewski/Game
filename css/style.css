@@ -22,7 +22,7 @@ body{
 
 .flex-container{
   background-image: linear-gradient(to right top, #3d6093, #00698f, #006c6f, #006a3f, #456205);
-  height: 100vmin;
+  height: 100vh;
 }
 
 
