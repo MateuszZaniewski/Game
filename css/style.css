@@ -67,7 +67,7 @@ input, select, textarea{
  margin-top: 5%;
  margin-bottom: 2%;
  height: 4rem;
- gap: 10px;
+ gap: 1rem;
 }
 
 button{
@@ -150,218 +150,21 @@ button:active {
 /* ADDITIONAL STYLES
 /*******************************************/
 
-/* .confetti{
-  position: relative;
-  border: 1px solid black;
-  height: 100vmin;
-  width: 25rem;
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  left: 0;
+@media screen and (min-width: 368px) {
+  h1{
+    padding-top: 10rem;
+    font-size: 10rem;
+  }
+  h2{
+    padding-top: 3rem;
+    font-size: 6rem;
+  }
+  .used-numbers{
+    padding-top: 2rem;
+    font-size: 3rem;
+  }
+  .inputContainer{
+    margin-top: 30rem;
+    gap: 4rem;
+  }
 }
-
-.confetti1{
-  position: relative;
-  border: 1px solid black;
-  height: 100vmin;
-  width: 25rem;
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.confetti > .conf1l {
- position: absolute;
- height: 4rem;
- width: 2rem;
- border: 1px solid red;
- left: 2%;
- animation-name: confetti1;
- animation-duration: 3s;
- animation-iteration-count: infinite;
- animation-timing-function: linear;
-}
-.confetti > .conf2l {
-  position: absolute;
-  height: 4rem;
-  width: 2rem;
-  border: 1px solid red;
-  left: 12%;
-  animation-name: confetti2;
-  animation-duration: 3.3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
- }
-
- .confetti > .conf3l {
-  position: absolute;
-  height: 4rem;
-  width: 2rem;
-  border: 1px solid red;
-  left: 22%;
-  animation-name: confetti3;
-  animation-duration: 3.6s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
- }
- .confetti > .conf4l {
-  position: absolute;
-  height: 4rem;
-  width: 2rem;
-  border: 1px solid red;
-  left: 32%;
-  animation-name: confetti4;
-  animation-duration: 3.9s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
- }
-
- .confetti > .conf5l {
-  position: absolute;
-  height: 4rem;
-  width: 2rem;
-  border: 1px solid red;
-  left: 42%;
-  animation-name: confetti5;
-  animation-duration: 4.2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
- }
- .confetti > .conf6l {
-  position: absolute;
-  height: 4rem;
-  width: 2rem;
-  border: 1px solid red;
-  left: 52%;
-  animation-name: confetti6;
-  animation-duration: 4.5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
- }
- .confetti > .conf7l {
-  position: absolute;
-  height: 4rem;
-  width: 2rem;
-  border: 1px solid red;
-  left: 62%;
-  animation-name: confetti7;
-  animation-duration: 4.8s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
- }
- .confetti > .conf8l {
-  position: absolute;
-  height: 4rem;
-  width: 2rem;
-  border: 1px solid red;
-  left: 72%;
-  animation-name: confetti8;
-  animation-duration: 5.1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
- }
- .confetti > .conf9l {
-  position: absolute;
-  height: 4rem;
-  width: 2rem;
-  border: 1px solid red;
-  left: 82%;
-  animation-name: confetti9;
-  animation-duration: 5.4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
- }
- .confetti > .conf10l {
-  position: absolute;
-  height: 4rem;
-  width: 2rem;
-  border: 1px solid red;
-  left: 92%;
-  animation-name: confetti10;
-  animation-duration: 5.7s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
- } */
-
- /******************************************
-/* ANIMATIONS
-/*******************************************/
-
-/* 
-@keyframes confetti1{
-  from { top: -5%;}
-  to { top: 93%;}
- }
-@keyframes confetti2{
-  from { top: 34%;}
-  to { top: 93%;}
- }
- @keyframes confetti3{
-  from { top: 74%;}
-  to { top: 93%;}
- }
- @keyframes confetti4{
-  from { top: 17%;}
-  to { top: 93%;}
- }
- @keyframes confetti5{
-  from { top: 27%;}
-  to { top: 93%;}
- }
- @keyframes confetti6{
-  from { top: 12%;}
-  to { top: 93%;}
- }
- @keyframes confetti7{
-  from { top: 8%;}
-  to { top: 93%;}
- }
- @keyframes confetti8{
-  from { top: 65%;}
-  to { top: 93%;}
- }
- @keyframes confetti9{
-  from { top: 49%;}
-  to { top: 93%;}
- }
- @keyframes confetti10{
-  from { top: 1%;}
-  to { top: 93%;}
- } */
-
-
-
- /******************************************
-/* MEDIA QUERIES
-/*******************************************/
-
-.snowflake {
-  color: #fff;
-  font-size: 3rem;
-  font-family: Arial;
-  text-shadow: 0 0 1px #000;
-}
-
-@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}
-
-@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}
-
-@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}
-
-@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}
-
-.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:contain;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}
-
-.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}
-.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}
-.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}
-.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}
-.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}
-.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}
-.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}
-.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}
-.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}
-.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
-/* Demo Purpose Only*/
