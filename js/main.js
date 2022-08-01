@@ -13,6 +13,9 @@ let errorInfo = document.querySelector('.errorInfo')
 let resultsArray = document.querySelector('.array')
 const restart = document.querySelector('.reset')
 const inputContainer = document.querySelector('.inputContainer')
+let keys = document.querySelectorAll('.key')
+let keyString = ''
+let keyCont = document.querySelector('.key').innerText
 
 // making random number displays in the box!
 let rand = document.querySelector('.hiddenNumber').innerText = rollRandomNumber()
@@ -21,14 +24,14 @@ document.querySelector('.button').addEventListener('click', checkForValid)
 
 
 function checkForValid(){
-    if(playerChoice.value === ''){
+    if(calcWindow.innerText === ''){
         errorInfo.classList.toggle('hidden')
         errorInfo.style.color = 'rgb(211, 207, 207)'
         errorInfo.innerText = 'Please enter valid number from 0 to 100'
         notValidInput()
     }
     // Jeśli liczba jest większa od szukanej
-    else if(playerChoice.value > rand){
+    else if(calcWindow.innerText > rand){
         console.log(rand)
         moreOrLessInfo()
         timeChangeAndCounterText()
@@ -36,7 +39,7 @@ function checkForValid(){
         
     }
     // Jeśli liczba jest mniejsza od szukanej
-    else if(playerChoice.value < rand){
+    else if(calcWindow.innerText < rand){
         console.log(rand)
         moreOrLessInfo()
         timeChangeAndCounterText()
@@ -59,12 +62,12 @@ function timeChangeAndCounterText(){
 }
 
 function clearInputAndCounterPlus(){
-    playerChoiceArray.push(playerChoice.value)
+    playerChoiceArray.push(calcWindow.innerText)
     const para = document.createElement("div");
-    const node = document.createTextNode(`${playerChoice.value}`);
+    const node = document.createTextNode(`${calcWindow.innerText}`);
     para.appendChild(node);
     document.querySelector('.previousResults').appendChild(para);
-    playerChoice.value = ''
+    calcWindow.innerText = ''
     counter++
     tryCounter.innerText = `Try counter: ${counter}`
 }
@@ -76,14 +79,18 @@ function notValidInput(){
 }
 
 
+
+
+
+// INFO DZIAŁA
 function moreOrLessInfo(){
-    if(playerChoice.value > rand){
+    if(calcWindow.innerText > rand){
         errorInfo.classList.toggle('hidden')
         errorInfo.style.color = 'rgb(211, 207, 207)'
         errorInfo.innerText = 'Your number is bigger'
         notValidInput()
     }
-    else if(playerChoice.value < rand){
+    else if(calcWindow.innerText < rand){
         errorInfo.classList.toggle('hidden')
         errorInfo.style.color = 'rgb(211, 207, 207)'
         errorInfo.innerText = 'Your number is lesser'
@@ -98,10 +105,8 @@ function moreOrLessInfo(){
     }
 }
 
-function makeResetButton(){
-    
-}
 
+// Działa 
 function resetGame(){
     let buton = document.querySelector('.reset')
     buton.classList.toggle('hidden') // hides reset button
@@ -117,4 +122,24 @@ function resetGame(){
     // toss new random number
     rand = rollRandomNumber()
     
+}
+
+
+let calcWindow = document.querySelector('.window')
+
+keys.forEach((el) => {
+    el.addEventListener('click', function (element){
+        // console.log(element)
+        // console.log(element.srcElement.innerText)
+        calcWindow.innerText += element.srcElement.innerText
+        console.log(calcWindow.innerText)
+
+    })
+})
+
+const clearButton = document.querySelector('.keyClear')
+clearButton.addEventListener('click', clearBoard)
+
+function clearBoard(){
+    calcWindow.innerText = ''
 }

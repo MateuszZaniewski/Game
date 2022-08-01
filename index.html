@@ -17,43 +17,45 @@
 	<body>
 
 		<section class="flex-container">
-			<h1>Guess number game</h1>
-			<h2>Try counter: </h2>
-			<p class="used-numbers">Used numbers: </p>
-			<section class="previousResults">
-				
-			</section>
-				<div class="hidden-number-container">
-					<span class="hiddenNumber"></span>
-				</div>
-				<div class="flex">
-					<span class="errorInfo hidden"></span>
-				</div>
-				<div class="inputContainer">
-					<input id="playerChoice" type="number" placeholder="Type number: ">
-					<button class="button">Click here</button>
-					<button class="reset hidden" onclick="resetGame()">Reset</button>
-				</div>
-				
-				<section class="keyboard">
-					<div class="keyContainer">
-						<div class="key">1</div>
-						<div class="key">2</div>
-						<div class="key">3</div>
-						<div class="key">4</div>
-						<div class="key">5</div>
-						<div class="key">6</div>
-						<div class="key">7</div>
-						<div class="key">8</div>
-						<div class="key">9</div>
-						<div class="key">0</div>
-						<div class="key">Clear</div>
+			<h1>Guess the number game</h1>
+			<h2>Try counter: / Lives left:</h2>
+			<section class="mainfield">
+				<div class="leftSide">
+					<div class="hidden-number-container">
+						<span class="hiddenNumber"></span>
 					</div>
+						<div class="keyContainer">
+							<div id="playerChoice" class="window">1</div>
+							<div class="key key1">1</div>
+							<div class="key">2</div>
+							<div class="key">3</div>
+							<div class="key">4</div>
+							<div class="key">5</div>
+							<div class="key">6</div>
+							<div class="key">7</div>
+							<div class="key">8</div>
+							<div class="key">9</div>
+							<div class="key">0</div>
+							<div class="keyClear">Clear</div>
+							<button class="button">Check</button>
+						</div>
+						
+				</div>
+				<div class="rightSide">
+					<p class="used-numbers">Used numbers: </p>
+						<section class="previousResults"></section>
+						<div class="flex">
+							<span class="errorInfo hidden"></span>
+						</div>
+						<div class="inputContainer">
+							<!-- <input id="playerChoicee" type="number" placeholder="Type number: "> -->
+							<button class="reset hidden" onclick="resetGame()">Reset</button>
+						</div>
+					</section>
+				</div>
+		</section>
 
-				</section>
-
-
-				<span class="array"></span>
+		<span class="array"></span>
 
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
