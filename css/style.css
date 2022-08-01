@@ -48,7 +48,7 @@ input{
   border: 1px solid white;
   border-radius: 1rem;
   width: 25rem;
-  box-shadow: 2px 2px #0059ff;
+  box-shadow: 2px 2px 5px #0059ff;
   background-color: #4CAF50;
 }
 
@@ -144,25 +144,10 @@ input, select, textarea{
 /* ADDITIONAL STYLES
 /*******************************************/
 
-/* @media screen and (max-width: 368px) {
-  h1{
-    padding-top: 5rem;
-    font-size: 10rem;
-  }
-  h2{
-    padding-top: 3rem;
-    font-size: 6rem;
-  }
-  .used-numbers{
-    padding-top: 2rem;
-    font-size: 3rem;
-  }
-  .inputContainer{
-    margin-top: 8rem;
-    gap: 4rem;
-  }
+@media screen and (max-width: 368px) {
+
 }
- */
+  
 
 /* LEFT SIDE */
 
@@ -191,14 +176,14 @@ input, select, textarea{
   cursor: pointer;
   text-decoration: none;
   outline: none;
-  box-shadow: 3px 5px #999;
+  box-shadow: 3px 5px 5px #999;
 }
 
 .key:hover {background-color: #3e8e41;}
 
 .key:active {
   background-color: #3e8e41;
-  box-shadow: 3px 5px #666;
+  box-shadow: 3px 5px 5px #666;
   transform: translateY(4px);
 }
 
@@ -218,14 +203,14 @@ input, select, textarea{
   cursor: pointer;
   text-decoration: none;
   outline: none;
-  box-shadow: 3px 5px #999;
+  box-shadow: 3px 5px 5px #999;
 }
 
 .keyClear:hover {background-color: #3e8e41;}
 
 .keyClear:active {
   background-color: #3e8e41;
-  box-shadow: 3px 5px #666;
+  box-shadow: 3px 5px 5px #666;
   transform: translateY(4px);
 }
 
@@ -240,8 +225,8 @@ button{
   color: #fff;
   background-color: #4CAF50;
   border: none;
-  border-radius: 1.5rem;
-  box-shadow: 0 5px #999;
+  border-radius: 0.7rem;
+  box-shadow: 0 5px 5px #999;
   flex-grow: 3;
 }
 
@@ -254,10 +239,10 @@ button:active {
 }
 
 .window{
-  border: 1px solid black;
-  background-color: rgb(187, 186, 186);
+  /* background-color: rgb(187, 186, 186); */
+  background: linear-gradient(90deg, rgb(211, 211, 211) 35%, rgba(124, 123, 123, 0.916)100%, rgb(98, 98, 99) 100%);
   width: 24rem;
-  font-size: 3rem;
+  font-size: 4rem;
   height: 7rem;
   text-align: center;
   display: flex;
@@ -268,8 +253,9 @@ button:active {
   color: black;
   cursor: auto;
   text-decoration: none;
+  font-style: italic;
   outline: none;
-  box-shadow: 3px 5px #999;
+  box-shadow: 3px 5px 5px #999;
 }
 
 /* RIGHT SIDE */
