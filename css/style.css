@@ -144,7 +144,7 @@ input, select, textarea{
 /* ADDITIONAL STYLES
 /*******************************************/
 
-@media screen and (max-width: 368px) {
+/* @media screen and (max-width: 368px) {
   h1{
     padding-top: 5rem;
     font-size: 10rem;
@@ -162,7 +162,7 @@ input, select, textarea{
     gap: 4rem;
   }
 }
-
+ */
 
 /* LEFT SIDE */
 
