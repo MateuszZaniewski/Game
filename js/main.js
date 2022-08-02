@@ -3,8 +3,6 @@ function rollRandomNumber(){
     return randomNumber
 }
 const playerChoice = document.getElementById("playerChoice")
-let box = document.querySelector('.hidden-number-container')
-let number = document.querySelector('.hiddenNumber')
 let counter = 0
 let playerChoiceArray = []
 const tryCounter = document.querySelector('h2')
@@ -34,7 +32,6 @@ function checkForValid(){
     else if(calcWindow.innerText > rand){
         console.log(rand)
         moreOrLessInfo()
-        timeChangeAndCounterText()
         clearInputAndCounterPlus()
         
     }
@@ -42,24 +39,16 @@ function checkForValid(){
     else if(calcWindow.innerText < rand){
         console.log(rand)
         moreOrLessInfo()
-        timeChangeAndCounterText()
         clearInputAndCounterPlus()
     } else {
         moreOrLessInfo()
         clearInputAndCounterPlus()
-        makeResetButton()
+        //restart.classList.toggle('hidden')
         console.log(rand)
         
     }
 }
 
-
-function timeChangeAndCounterText(){
-    setTimeout(function(){
-        box.style.backgroundColor = 'white'
-        box.innerText = ''
-    },1000)
-}
 
 function clearInputAndCounterPlus(){
     playerChoiceArray.push(calcWindow.innerText)
@@ -129,10 +118,7 @@ let calcWindow = document.querySelector('.window')
 
 keys.forEach((el) => {
     el.addEventListener('click', function (element){
-        // console.log(element)
-        // console.log(element.srcElement.innerText)
         calcWindow.innerText += element.srcElement.innerText
-        console.log(calcWindow.innerText)
 
     })
 })
