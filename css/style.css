@@ -229,8 +229,9 @@ button:active {
 
 /* RIGHT SIDE */
 
-/* Mi 9 SE */
-@media screen and (max-width: 600px) { 
+                                              /* Mi 9 SE */
+@media screen and (max-width: 368px), 
+       screen and (max-height: 770px) { 
   h1 {
     font-size: 1.8rem;
     margin: 0;
@@ -360,8 +361,9 @@ button:active {
   
 }
 
-/* Redmi 4 Paulina */
-@media screen and (max-height: 645px) { 
+                                           /* Redmi 4 Paulina */
+@media screen and (max-width: 368px), 
+       screen and (max-height: 645px) { 
   h1 {
     font-size: 1.7rem;
     margin: 0;
