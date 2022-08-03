@@ -14,6 +14,10 @@ const inputContainer = document.querySelector('.inputContainer')
 let keys = document.querySelectorAll('.key')
 let keyString = ''
 let keyCont = document.querySelector('.key').innerText
+let level = 10
+
+// makes lifes for player when he runs game for the first time(or refreshes the page)
+createHearts(level)
 
 // making random number displays in the box!
 let rand = document.querySelector('.hiddenNumber').innerText = rollRandomNumber()
@@ -33,6 +37,9 @@ function checkForValid(){
         console.log(rand)
         moreOrLessInfo()
         clearInputAndCounterPlus()
+        removeHeart()
+        youLost()
+        
         
     }
     // Jeśli liczba jest mniejsza od szukanej
@@ -40,10 +47,13 @@ function checkForValid(){
         console.log(rand)
         moreOrLessInfo()
         clearInputAndCounterPlus()
+        removeHeart()
+        youLost()
+    
+    // Jeśli gracz trafi liczbę
     } else {
         moreOrLessInfo()
         clearInputAndCounterPlus()
-        //restart.classList.toggle('hidden')
         console.log(rand)
         
     }
@@ -57,8 +67,8 @@ function clearInputAndCounterPlus(){
     para.appendChild(node);
     document.querySelector('.previousResults').appendChild(para);
     calcWindow.innerText = ''
-    counter++
-    tryCounter.innerText = `Try counter: ${counter}`
+    level --
+    tryCounter.innerText = `Lives left: ${level}`
 }
 
 function notValidInput(){
@@ -99,9 +109,8 @@ function moreOrLessInfo(){
 function resetGame(){
     let buton = document.querySelector('.reset')
     buton.classList.toggle('hidden') // hides reset button
-    // clear Try Counter
-    counter = ''
-    tryCounter.innerText = `Try counter: ${counter}`
+    level = 10
+    tryCounter.innerText = `Try counter: ${level}`
     // clear used Numbers
     document.querySelector('.previousResults').innerHTML = ''
     // clear info that you won
@@ -110,6 +119,7 @@ function resetGame(){
     document.querySelector('.inputContainer')
     // toss new random number
     rand = rollRandomNumber()
+    createHearts(level)
     
 }
 
@@ -129,3 +139,29 @@ clearButton.addEventListener('click', clearBoard)
 function clearBoard(){
     calcWindow.innerText = ''
 }
+
+function removeHeart(){
+    const heart = document.querySelector('.heart');
+    document.querySelector('.lifes').removeChild(heart);
+    
+}
+
+
+function createHearts(level){
+    for(let i = 1; i <= level ; i++){
+        const heart = document.createElement('img')
+        heart.setAttribute('src','img/pixelHeart.jpg')
+        heart.setAttribute('class','heart')
+        document.querySelector('.lifes').appendChild(heart)
+    }
+}
+
+function youLost(){
+    if(level === 0){
+        tryCounter.innerText = `Sorry, You lost the game`
+        restart.classList.toggle('hidden')
+        rollRandomNumber()
+    }
+}
+
+// Zrobić funkcję resetującą serduszka przed zresetowaniem gry

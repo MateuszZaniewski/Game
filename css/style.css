@@ -43,6 +43,7 @@ h2{
   text-shadow: 2px 2px #0059ff;
 }
 
+
 .previousResults{
   height: 27vmin;
   margin-bottom: 2%;
@@ -115,7 +116,17 @@ h2{
 /* ADDITIONAL STYLES
 /*******************************************/
 
+img{
+  height: 3rem;
+  width: 3rem;
+}
 
+
+.lifes{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
   
 
 /* LEFT SIDE */
@@ -233,7 +244,7 @@ button:active {
 @media screen and (max-width: 368px), 
        screen and (max-height: 770px) { 
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     margin: 0;
   }
 
@@ -365,7 +376,7 @@ button:active {
 @media screen and (max-width: 368px), 
        screen and (max-height: 645px) { 
   h1 {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     margin: 0;
   }
 
