@@ -1,3 +1,11 @@
+const game = {
+    playerChoice : document.getElementById("playerChoice"),
+    counter : 0,
+    playerChoiceArray : [],
+}
+
+
+
 function rollRandomNumber(){
     let randomNumber = Math.ceil(Math.random() * 100)
     return randomNumber
@@ -165,3 +173,6 @@ function youLost(){
 }
 
 // Zrobić funkcję resetującą serduszka przed zresetowaniem gry
+
+
+
